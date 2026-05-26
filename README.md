@@ -1,4 +1,4 @@
-# flutter_application_1
+#АНАЛИТИЧЕСКАЯ ПЛАТФОРМА ДЛЯ УПРАВЛЕНИЯ ЗДОРОВЬЕМ И ПРОДУКТИВНОСТЬЮ (PLUSAURA)
 
 A new Flutter project.
 
