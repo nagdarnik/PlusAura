@@ -1,17 +1,68 @@
-#АНАЛИТИЧЕСКАЯ ПЛАТФОРМА ДЛЯ УПРАВЛЕНИЯ ЗДОРОВЬЕМ И ПРОДУКТИВНОСТЬЮ (PLUSAURA)
+<div align="center">
 
-A new Flutter project.
+# PlusAura
 
-## Getting Started
+### Здоровье · Продуктивность · Данные
 
-This project is a starting point for a Flutter application.
+Прототип приложения для питания, тренировок и повседневных задач.
 
-A few resources to get you started if this is your first Flutter project:
+**Flutter / Dart · Python / FastAPI · PostgreSQL**
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+</div>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Идея проекта
+
+PlusAura объединяет несколько пользовательских сценариев в одном приложении: планирование дня, учёт питания, запись тренировок и просмотр прогресса. Проект позволяет проследить путь от продуктовой идеи и экранов до серверных API.
+
+## Возможности
+
+| Раздел | Что реализовано в исходном коде |
+| :--- | :--- |
+| **Календарь** | Просмотр и добавление задач |
+| **Питание** | Учёт приёмов пищи и экран плана питания |
+| **Тренировки** | Запись тренировок и отображение активности |
+| **Аналитика** | Графики калорий, белка и тренировок |
+| **Backend** | Регистрация, вход, API задач, питания и тренировок |
+| **Генерация рекомендаций** | Серверный маршрут генерации плана питания |
+
+## Навигация по коду
+
+| Файл | Назначение |
+| :--- | :--- |
+| [`lib/main.dart`](lib/main.dart) | Точка входа Flutter-приложения |
+| [`lib/main_screen.dart`](lib/main_screen.dart) | Основные экраны, календарь и визуализации |
+| [`lib/meal_plan_screen.dart`](lib/meal_plan_screen.dart) | Экран плана питания |
+| [`lib/models/`](lib/models/) | Модели питания и тренировок |
+| [`lib/services/gpt_service.dart`](lib/services/gpt_service.dart) | Клиентский сервис запросов |
+| [`lib/backend/main.py`](lib/backend/main.py) | FastAPI-сервер и работа с PostgreSQL |
+| [`pubspec.yaml`](pubspec.yaml) | Зависимости Flutter |
+
+## Стек
+
+- **Интерфейс:** Flutter, Dart, Material Design.
+- **Визуализация:** fl_chart, percent_indicator.
+- **Календарь и локальное хранение:** table_calendar, shared_preferences.
+- **API и данные:** Python, FastAPI, Pydantic, asyncpg, PostgreSQL.
+
+## Запуск клиентской части
+
+Нужны установленный Flutter SDK и совместимый Dart SDK — ограничения версий указаны в `pubspec.yaml`.
+
+```bash
+git clone https://github.com/nagdarnik/PlusAura.git
+cd PlusAura
+flutter pub get
+flutter run
+```
+
+Работа сетевых функций зависит от настройки backend, базы PostgreSQL и внешнего сервиса генерации. Запуск клиента сам по себе не настраивает эти компоненты.
+
+## Текущий статус
+
+Это прототип: часть экранов использует демонстрационные данные. Код серверной части находится в репозитории, но отдельные SQL-материалы по продуктовым метрикам, A/B-анализ и Power BI-отчёт здесь пока не опубликованы.
+
+## Автор
+
+[Дарья Нагурная](https://github.com/nagdarnik) · Data / Product Analytics
